@@ -5,11 +5,17 @@
 
 	// Generate the HTML for the form
 	$output .= '<form method="post" id="synkli_leads_form" action="' . esc_url( admin_url( 'admin-post.php' ) ) . '">';
-	$output .= '<h2 style="text-align: center;">Synkli Form Leads</h2>';
+	$output .= '<h2 class="synkli-form-title">Contact <span>Us</span></h2>';
+	$output .= '<p class="synkli-form-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent suscipit tristique scelerisque.</h2>';
 	$output .= '<input type="hidden" name="action" value="synkli_submit_form">';
 	$output .= '<input type="hidden" id="synkli_api_key" name="api_key" value="'.get_option("synkli_api_key").'">';
 	$output .= '<input type="hidden" id="synkli_secret_key" name="secret_key" value="'.get_option("synkli_secret_key").'">';
 	
+	$output .= '<div class="synkli-form-fields-wrap">';
+
+
+	$output .= '<div class="synkli-form-field-group">';
+
 	// First Name
 	$output .= '<div class="synkli-form-field">';
 	$output .= '<label for="first_name">First Name:</label>';
@@ -20,6 +26,8 @@
 	$output .= '<div class="synkli-form-field">';
 	$output .= '<label for="last_name">Last Name:</label>';
 	$output .= '<input type="text" name="last_name" id="last_name" required>';
+	$output .= '</div>';
+
 	$output .= '</div>';
 	
 	// Email
@@ -41,7 +49,7 @@
 	$output .= '</div>';
 	
 	// Submit Button
-	$output .= '<div class="synkli-form-field">';
+	$output .= '<div class="synkli-form-field synkli-form-field-submit-btn-wrap">';
 	$output .= '<input type="submit" value="Submit">';
 	$output .= '</div>';
 	
@@ -49,6 +57,11 @@
 
     
     $output .= '</div>';
+
+
+    $output .= '</div>';
 	
     
-	
+	if(get_option('synkli_form_style_type') === 'custom-style'){
+		$output .=  '<style>' . get_option('synkli_custom_css') . '</style>';
+	}

@@ -2,3 +2,9 @@
  * All of the CSS for your admin-specific functionality should be
  * included in this file.
  */
+ 
+ .synkli-css-editor{
+    width: 100%;
+    max-width: 600px;
+    min-height: 300px;   
+ }

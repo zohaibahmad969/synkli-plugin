@@ -120,6 +120,12 @@ class Synkli_Leads_Admin {
 
         // Register setting for Synkli Secret Key
         register_setting( 'synkli_leads_settings', 'synkli_secret_key' );
+
+		// Register setting for Synkli Form Style Type
+		register_setting('synkli_leads_settings', 'synkli_form_style_type');
+
+		// Register setting for Synkli Form Style Custom Css Code
+		register_setting('synkli_leads_settings', 'synkli_custom_css');
     }
 
 	/**
@@ -129,20 +135,55 @@ class Synkli_Leads_Admin {
 	 */
 	public function synkli_leads_admin_menu()
 	{	
-		add_menu_page(
-			__('Synkli Leads', 'synkli-leads'), // Page title
-			__('Synkli Leads', 'synkli-leads'), // Menu title
-			'activate_plugins',                 // Capability required to access
-			'synkli_leads',                     // Menu slug
-			'synkli_leads_dashboard_page',      // Callback function
-			'dashicons-analytics',              // Icon (optional)
-			50                                // Position (null for top level)
-		);
-
+		add_menu_page( 'Synkli Leads', 'Synkli Leads', 'activate_plugins', 'synkli_leads', 'synkli_leads_dashboard_page', 'dashicons-analytics', 50 );
+		
 		if (!function_exists('synkli_leads_dashboard_page')) {
 			function synkli_leads_dashboard_page()
 			{
 			   include(dirname (__FILE__) . '/partials/synkli-leads-admin-display.php');
+			}
+		}
+
+
+		add_submenu_page( 'synkli_leads', 'Integration', 'Integration', 'manage_options', 'synkli-leads-integration', 'synkli_leads_dashboard_integration_page');
+
+		if (!function_exists('synkli_leads_dashboard_integration_page')) {
+			function synkli_leads_dashboard_integration_page()
+			{
+			   include(dirname (__FILE__) . '/partials/synkli-leads-admin-menu-integration.php');
+				
+			}
+		}
+
+	
+		add_submenu_page( 'synkli_leads', 'Style', 'Style', 'manage_options', 'synkli-leads-style', 'synkli_leads_dashboard_style_page' );
+		
+		if (!function_exists('synkli_leads_dashboard_style_page')) {
+			function synkli_leads_dashboard_style_page()
+			{
+			   include(dirname (__FILE__) . '/partials/synkli-leads-admin-menu-style.php');
+				
+			}
+		}
+
+	
+		add_submenu_page( 'synkli_leads', 'Emails', 'Emails', 'manage_options', 'synkli-leads-style', 'synkli_leads_dashboard_emails_page' );
+		
+		if (!function_exists('synkli_leads_dashboard_emails_page')) {
+			function synkli_leads_dashboard_emails_page()
+			{
+			   include(dirname (__FILE__) . '/partials/synkli-leads-admin-menu-emails.php');
+				
+			}
+		}
+
+
+		add_submenu_page( 'synkli_leads', 'Help', 'Help', 'manage_options', 'synkli-leads-help', 'synkli_leads_dashboard_help_page' );
+
+		if (!function_exists('synkli_leads_dashboard_help_page')) {
+			function synkli_leads_dashboard_help_page()
+			{
+			   include(dirname (__FILE__) . '/partials/synkli-leads-admin-menu-help.php');
 				
 			}
 		}
