@@ -1,0 +1,53 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+ /* Styles for the form container */
+.synkli-form-container {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.synkli-form-container form{
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+/* Styles for form labels */
+.synkli-form-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Styles for form input fields */
+.synkli-form-field input[type="text"],
+.synkli-form-field input[type="email"],
+.synkli-form-field input[type="tel"],
+.synkli-form-field textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+/* Styles for submit button */
+.synkli-form-field input[type="submit"] {
+    width: 100%;
+    background-color: #0A1E46;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Hover effect for submit button */
+.synkli-form-field input[type="submit"]:hover {
+    background-color: #0A1E46;
+}
