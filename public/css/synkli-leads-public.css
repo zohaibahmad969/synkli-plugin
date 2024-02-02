@@ -2,3 +2,209 @@
  * All of the CSS for your public-facing functionality should be
  * included in this file.
  */
+
+ /**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+ /* Styles for the form container */
+ .synkli-form-container {
+    max-width: 850px!important;
+    margin: 40px auto;
+    padding: 25px 40px 35px;
+    box-shadow: 0px 0px 24px 5px #5A5A5A25;
+    border-radius: 16px;
+}
+.synkli-form-container h2.synkli-form-title{
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 5px;
+}
+.synkli-form-container p.synkli-form-description{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    max-width: 600px;
+    margin: 0 auto 0px;
+}
+.synkli-form-container .synkli-form-fields-wrap{
+    margin-top: 25px;
+}
+.synkli-form-container .synkli-form-field-group{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: space-between;
+}
+.synkli-form-container .synkli-form-field-group .synkli-form-field{
+    flex: 1;
+}
+.synkli-form-container .synkli-form-field label {
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.synkli-form-container .synkli-form-field input[type="text"],
+.synkli-form-container .synkli-form-field input[type="email"],
+.synkli-form-container .synkli-form-field input[type="tel"],
+.synkli-form-container .synkli-form-field textarea {
+    width: 100%;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    border: 0;
+    border-radius: 80px;
+    box-sizing: border-box;
+    font-size: 18px;
+    min-height: 40px;
+    height: auto;
+}
+
+.synkli-form-container .synkli-form-field textarea {
+    min-height: 100px;
+    border-radius: 25px;
+}
+
+.synkli-form-container .synkli-form-field-submit-btn-wrap{
+    text-align: center;
+    max-width: 185px;
+    margin: auto;
+}
+.synkli-form-container .synkli-form-field input[type="submit"] {
+    width: 100%;
+    max-width: 170px;
+    margin: auto;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+}
+.synkli-form-success-message{
+    margin-bottom: 0;
+    color: green;
+    display: none;
+}
+.synkli-form-error-message{
+    margin-bottom: 0;
+    color: red;
+    display: none;
+}
+.synkli-form-container .synkli-loader {
+    position: relative;
+}
+  
+.synkli-form-container .synkli-loader:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -35px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 5px dotted #0a1e46;
+    transform-origin: center;
+    animation: synkliLoaderAnimation 1.5s infinite linear;
+}
+  
+
+/* Light version */
+.synkli-style-light h2.synkli-form-title,
+.synkli-style-light p.synkli-form-description{
+    color: #0A1E46;
+}
+.synkli-style-light h2.synkli-form-title span{
+    color: #B695F8;
+}
+.synkli-style-light .synkli-form-field label {
+    color: #0A1E46;
+}
+.synkli-style-light .synkli-form-field input[type="text"],
+.synkli-style-light .synkli-form-field input[type="email"],
+.synkli-style-light .synkli-form-field input[type="tel"],
+.synkli-style-light .synkli-form-field textarea {
+    background-color: #f2f1fa;
+}
+.synkli-style-light .synkli-form-field input[type="submit"] {
+    background-color: #0A1E46;
+}
+.synkli-style-light .synkli-form-field input[type="submit"]:hover{
+    background-color: #03112c;
+}
+
+/* Dark Version */
+.synkli-style-dark {
+    background-color: #0A1E46;
+}
+.synkli-style-dark h2.synkli-form-title,
+.synkli-style-dark p.synkli-form-description{
+    color: white;
+}
+.synkli-style-dark h2.synkli-form-title span{
+    color: #B695F8;
+}
+.synkli-style-dark .synkli-form-field label {
+    color: white;
+}
+.synkli-style-dark .synkli-form-field input[type="text"],
+.synkli-style-dark .synkli-form-field input[type="email"],
+.synkli-style-dark .synkli-form-field input[type="tel"],
+.synkli-style-dark .synkli-form-field textarea {
+    background-color: #162754;
+}
+.synkli-style-dark .synkli-form-field input[type="submit"] {
+    background-color: #B695F8;
+}
+.synkli-style-dark .synkli-form-field input[type="submit"]:hover{
+    background-color: #8b60e0;
+}
+.synkli-style-dark .synkli-loader:before {
+    border: 5px dotted #B695F8;
+}
+
+
+@keyframes synkliLoaderAnimation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+  
+@media (max-width: 767px){
+    .synkli-form-container {
+        padding: 40px 25px;
+        margin: 40px auto;
+    }
+    .synkli-form-field-group{
+        display: block;
+    }
+    .synkli-form-container h2.synkli-form-title {
+        font-size: 28px;
+    }
+    .synkli-form-container p.synkli-form-description {
+        font-size: 16px;
+        margin: 0 auto 10px;
+    }
+    .synkli-form-fields-wrap {
+        margin-top: 20px;
+    }
+    .synkli-form-field label {
+        font-size: 18px;
+        margin-bottom: 14px;
+    }
+    .synkli-form-field input[type="text"], .synkli-form-field input[type="email"], .synkli-form-field input[type="tel"]{
+        min-height: 50px;
+    }
+    .synkli-form-field textarea {
+        min-height: 130px;
+    }
+    .synkli-form-field input[type="submit"] {
+        font-size: 18px;
+    }
+}
