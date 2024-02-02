@@ -7,7 +7,6 @@
 	$output .= '<form method="post" id="synkli_leads_form" action="' . esc_url( admin_url( 'admin-post.php' ) ) . '">';
 	$output .= '<h2 class="synkli-form-title">Contact <span>Us</span></h2>';
 	$output .= '<p class="synkli-form-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent suscipit tristique scelerisque.</h2>';
-	$output .= '<input type="hidden" name="action" value="synkli_submit_form">';
 	$output .= '<input type="hidden" id="synkli_api_key" name="api_key" value="'.get_option("synkli_api_key").'">';
 	$output .= '<input type="hidden" id="synkli_secret_key" name="secret_key" value="'.get_option("synkli_secret_key").'">';
 	

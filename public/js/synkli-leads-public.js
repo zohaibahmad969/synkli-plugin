@@ -51,9 +51,7 @@ jQuery(document).ready(function($) {
 				$.ajax({
 					type: 'POST',
 					url: synkli_ajax.ajaxurl, // Use WordPress AJAX URL
-					data: {
-						formData
-					},
+					data: formData,
 					dataType: 'json',
 					success: function(response) {
 						// Handle success response

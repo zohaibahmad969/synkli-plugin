@@ -123,9 +123,15 @@ class Synkli_Leads_Public {
         $message = isset($_POST['message']) ? sanitize_textarea_field($_POST['message']) : '';
 
         // Email configuration
-        $to = 'za.solutions@gmail.com'; // Change to the recipient's email address
-        $subject = 'New Form Submission';
-        $headers = array('Content-Type: text/html; charset=UTF-8');
+        $to = get_option('synkli_email_to', get_option('admin_email')); 
+        $from = get_option('synkli_email_from', get_option('admin_email'));
+        $subject = get_option('synkli_email_subject', 'New Form Submission');
+		$email_format = get_option('synkli_email_format', 'html');
+		$content_type = $email_format === 'html' ? 'text/html' : 'text/plain';
+		$headers = array(
+			'Content-Type: ' . $content_type . '; charset=UTF-8',
+			'From: ' . $from
+		);
 
         // Email body
         $body = "First Name: $first_name<br>";

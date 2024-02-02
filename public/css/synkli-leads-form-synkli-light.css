@@ -115,8 +115,11 @@
         font-size: 18px!important;
         margin-bottom: 14px!important;
     }
-    .synkli-form-field input[type="text"], .synkli-form-field input[type="email"], .synkli-form-field input[type="tel"], .synkli-form-field textarea {
+    .synkli-form-field input[type="text"], .synkli-form-field input[type="email"], .synkli-form-field input[type="tel"]{
         min-height: 50px!important;
+    }
+    .synkli-form-field textarea {
+        min-height: 130px!important;
     }
     .synkli-form-field input[type="submit"] {
         font-size: 18px!important;
