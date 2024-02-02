@@ -19,7 +19,7 @@
     <h2><?php echo __('Synkli Leads Style', 'synkli-leads'); ?></h2>
     <p><?php echo __('Choose a style for your Synkli Leads form:', 'synkli-leads'); ?></p>
     <form method="post" action="options.php">
-        <?php settings_fields('synkli_leads_settings'); ?>
+        <?php settings_fields('synkli_leads_style_settings'); ?>
         <table class="form-table">
             <tr valign="top">
                 <th scope="row"><?php echo __('Form Style', 'synkli-leads'); ?></th>

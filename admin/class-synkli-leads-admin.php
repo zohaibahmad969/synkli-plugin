@@ -70,18 +70,6 @@ class Synkli_Leads_Admin {
 	 */
 	public function enqueue_styles() {
 
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Synkli_Leads_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Synkli_Leads_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
-
 		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/synkli-leads-admin.css', array(), $this->version, 'all' );
 
 	}
@@ -92,18 +80,6 @@ class Synkli_Leads_Admin {
 	 * @since    1.0.0
 	 */
 	public function enqueue_scripts() {
-
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Synkli_Leads_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Synkli_Leads_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
 
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/synkli-leads-admin.js', array( 'jquery' ), $this->version, false );
 
@@ -116,18 +92,18 @@ class Synkli_Leads_Admin {
 	 */
 	public function synkli_initialize_settings() {
         
-        register_setting( 'synkli_leads_settings', 'synkli_api_key' );
-        register_setting( 'synkli_leads_settings', 'synkli_secret_key' );
+        register_setting( 'synkli_leads_api_settings', 'synkli_api_key' );
+        register_setting( 'synkli_leads_api_settings', 'synkli_secret_key' );
 
-		register_setting('synkli_leads_settings', 'synkli_form_style_type');
-		register_setting('synkli_leads_settings', 'synkli_custom_css');
+		register_setting('synkli_leads_style_settings', 'synkli_form_style_type');
+		register_setting('synkli_leads_style_settings', 'synkli_custom_css');
 
-		register_setting('synkli_leads_settings', 'synkli_email_to');
-		register_setting('synkli_leads_settings', 'synkli_email_from');
-		register_setting('synkli_leads_settings', 'synkli_email_subject');
-		register_setting('synkli_leads_settings', 'synkli_email_headers');
-		register_setting('synkli_leads_settings', 'synkli_email_body');
-		register_setting('synkli_leads_settings', 'synkli_email_format');
+		register_setting('synkli_leads_email_settings', 'synkli_email_to');
+		register_setting('synkli_leads_email_settings', 'synkli_email_from');
+		register_setting('synkli_leads_email_settings', 'synkli_email_subject');
+		register_setting('synkli_leads_email_settings', 'synkli_email_headers');
+		register_setting('synkli_leads_email_settings', 'synkli_email_body');
+		register_setting('synkli_leads_email_settings', 'synkli_email_format');
     }
 
 	/**

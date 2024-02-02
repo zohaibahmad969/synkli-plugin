@@ -17,7 +17,7 @@
 <div class="wrap synkli-admin-menu-page-wrap">
     <h2><?php echo __('Synkli Leads Settings', 'synkli-leads'); ?></h2>
     <form method="post" action="options.php">
-        <?php settings_fields( 'synkli_leads_settings' ); ?>
+        <?php settings_fields( 'synkli_leads_api_settings' ); ?>
         <table class="form-table">
             <tr valign="top">
                 <th scope="row"><?php echo __('Synkli API Key', 'synkli-leads'); ?></th>

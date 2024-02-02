@@ -32,13 +32,44 @@ jQuery(document).ready(function($) {
 		// AJAX request
 		$.ajax({
 			type: 'POST',
-			url: 'https://your-api-endpoint-url',
+			url: 'https://api.synkli.dev/api/users/external-contact-form',
 			data: formData,
 			dataType: 'json',
 			success: function(response) {
 				// Handle success response
 				console.log('API call successful:', response);
-				// You can update the UI or show a success message here
+
+
+
+				// Send user email about form submission
+				formData = {};
+				crnt.serializeArray().forEach(function(item) {
+					formData[item.name] = item.value.replace(/<[^>]*>?/gm, '');
+				});
+				formData['action'] = 'synkli_send_email';
+
+				$.ajax({
+					type: 'POST',
+					url: synkli_ajax.ajaxurl, // Use WordPress AJAX URL
+					data: {
+						formData
+					},
+					dataType: 'json',
+					success: function(response) {
+						// Handle success response
+						console.log('Email sent successfully:', response);
+						// You can update the UI or show a success message here
+					},
+					error: function(xhr, status, error) {
+						// Handle error response
+						console.error('Error:', error);
+						// You can display an error message or handle the error as needed
+					}
+				});
+
+
+
+
 			},
 			error: function(xhr, status, error) {
 				// Handle error response

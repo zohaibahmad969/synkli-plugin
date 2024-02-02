@@ -55,6 +55,9 @@ class Synkli_Leads_Public {
 		// Register shortcode for synkli form leads
         add_shortcode( 'synkli_leads_form', array( $this, 'synkli_leads_shortcode_handler' ) );
 
+		add_action('wp_ajax_synkli_send_email', array($this, 'synkli_send_email_callback'));
+        add_action('wp_ajax_nopriv_synkli_send_email', array($this, 'synkli_send_email_callback')); // For non-logged-in users
+
 	}
 
 	/**
@@ -63,18 +66,6 @@ class Synkli_Leads_Public {
 	 * @since    1.0.0
 	 */
 	public function enqueue_styles() {
-
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Synkli_Leads_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Synkli_Leads_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
 
 		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/synkli-leads-public.css', array(), $this->version, 'all' );
 
@@ -97,19 +88,10 @@ class Synkli_Leads_Public {
 	 */
 	public function enqueue_scripts() {
 
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Synkli_Leads_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Synkli_Leads_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
-
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/synkli-leads-public.js', array( 'jquery' ), $this->version, false );
+
+		// Localize the script with the ajaxurl
+        wp_localize_script($this->plugin_name, 'synkli_ajax', array('ajaxurl' => admin_url('admin-ajax.php')));
 
 	}
 	
@@ -126,5 +108,41 @@ class Synkli_Leads_Public {
 	
 		return $output;
 	}
+
+	 /**
+	 * AJAX callback function to send email
+	 *
+	 * @since    1.0.0
+	 */
+	public function synkli_send_email_callback() {
+        // Retrieve form data
+        $first_name = isset($_POST['first_name']) ? sanitize_text_field($_POST['first_name']) : '';
+        $last_name = isset($_POST['last_name']) ? sanitize_text_field($_POST['last_name']) : '';
+        $email = isset($_POST['email']) ? sanitize_email($_POST['email']) : '';
+        $phone = isset($_POST['phone']) ? sanitize_text_field($_POST['phone']) : '';
+        $message = isset($_POST['message']) ? sanitize_textarea_field($_POST['message']) : '';
+
+        // Email configuration
+        $to = 'za.solutions@gmail.com'; // Change to the recipient's email address
+        $subject = 'New Form Submission';
+        $headers = array('Content-Type: text/html; charset=UTF-8');
+
+        // Email body
+        $body = "First Name: $first_name<br>";
+        $body .= "Last Name: $last_name<br>";
+        $body .= "Email: $email<br>";
+        $body .= "Phone: $phone<br>";
+        $body .= "Message:<br>$message<br>";
+
+        // Send email
+        $sent = wp_mail($to, $subject, $body, $headers);
+
+        // Send JSON response
+        if ($sent) {
+            wp_send_json_success('Email sent successfully');
+        } else {
+            wp_send_json_error('Failed to send email');
+        }
+    }
 
 }
