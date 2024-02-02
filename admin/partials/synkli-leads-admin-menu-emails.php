@@ -32,7 +32,7 @@
                 <th scope="row"><?php echo __('Subject', 'synkli-leads'); ?></th>
                 <td><input type="text" name="synkli_email_subject" value="<?php echo esc_attr(get_option('synkli_email_subject')); ?>" /></td>
             </tr>
-            <tr valign="top">
+            <tr valign="top" style="display: none;">
                 <th scope="row"><?php echo __('Additional Headers', 'synkli-leads'); ?></th>
                 <td><input type="text" name="synkli_email_headers" value="<?php echo esc_attr(get_option('synkli_email_headers')); ?>" /></td>
             </tr>
@@ -44,6 +44,15 @@
                         <option value="html" <?php selected(get_option('synkli_email_format'), 'html'); ?>><?php echo __('HTML', 'synkli-leads'); ?></option>
                     </select>
                 </td>
+            </tr>
+            <tr valign="top">
+                <th scope="row"><?php echo __('Email Success Message', 'synkli-leads'); ?></th>
+                <td><input type="text" name="synkli_form_success_message" value="<?php echo esc_attr(get_option('synkli_form_success_message')); ?>" /></td>
+            </tr>
+            
+            <tr valign="top">
+                <th scope="row"><?php echo __('Email Error Message', 'synkli-leads'); ?></th>
+                <td><input type="text" name="synkli_form_error_message" value="<?php echo esc_attr(get_option('synkli_form_error_message')); ?>" /></td>
             </tr>
             <tr valign="top">
                 <th scope="row"><?php echo __('Message Body', 'synkli-leads'); ?></th>

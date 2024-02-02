@@ -125,7 +125,7 @@ class Synkli_Leads_Public {
         // Email configuration
         $to = get_option('synkli_email_to', get_option('admin_email')); 
         $from = get_option('synkli_email_from', get_option('admin_email'));
-        $subject = get_option('synkli_email_subject', 'New Form Submission');
+        $subject = get_option('synkli_email_subject', 'Synkli Form Submission');
 		$email_format = get_option('synkli_email_format', 'html');
 		$content_type = $email_format === 'html' ? 'text/html' : 'text/plain';
 		$headers = array(

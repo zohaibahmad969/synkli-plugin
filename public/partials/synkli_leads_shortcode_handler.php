@@ -51,6 +51,11 @@
 	$output .= '<div class="synkli-form-field synkli-form-field-submit-btn-wrap">';
 	$output .= '<input type="submit" value="Submit">';
 	$output .= '</div>';
+
+	$output .= '<div class="synkli-form-messages">';
+	$output .= '<p class="synkli-form-success-message">'.get_option("synkli_form_success_message", "Your data has been saved.").'</p>';
+	$output .= '<p class="synkli-form-error-message">'.get_option("synkli_form_error_message", "Some error occured. Please try again.").'</p>';
+	$output .= '</div>';
 	
 	$output .= '</form>';
 

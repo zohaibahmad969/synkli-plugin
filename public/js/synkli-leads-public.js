@@ -3,6 +3,8 @@ jQuery(document).ready(function($) {
         // Prevent the default form submission
         event.preventDefault();
 
+		$(".synkli-form-field-submit-btn-wrap").addClass('synkli-loader');
+
 		let crnt = $(this);
 
         // Your API key and secret key
@@ -55,13 +57,20 @@ jQuery(document).ready(function($) {
 					dataType: 'json',
 					success: function(response) {
 						// Handle success response
+
 						console.log('Email sent successfully:', response);
 						// You can update the UI or show a success message here
+						$(".synkli-form-field-submit-btn-wrap").removeClass('synkli-loader');
+						$(".synkli-form-success-message").show();
+						crnt.find("input[type='text'],input[type='email'],input[type='tel'], textarea").val('');
 					},
 					error: function(xhr, status, error) {
 						// Handle error response
+
 						console.error('Error:', error);
 						// You can display an error message or handle the error as needed
+						$(".synkli-form-field-submit-btn-wrap").removeClass('synkli-loader');
+						$(".synkli-form-error-message").show();
 					}
 				});
 

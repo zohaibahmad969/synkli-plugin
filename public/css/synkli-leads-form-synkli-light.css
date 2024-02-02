@@ -76,11 +76,13 @@
 
 .synkli-form-field-submit-btn-wrap{
     text-align: center!important;
+    max-width: 185px!important;
+    margin: auto!important;
 }
 .synkli-form-field input[type="submit"] {
     width: 100%!important;
     background-color: #0A1E46!important;
-    max-width: 250px!important;
+    max-width: 185px!important;
     margin: auto!important;
     color: white!important;
     padding: 15px 20px!important;
@@ -93,6 +95,42 @@
 .synkli-form-field input[type="submit"]:hover{
     background-color: #03112c!important;
 }
+.synkli-form-success-message{
+    margin-bottom: 0;
+    color: green;
+    display: none;
+}
+.synkli-form-error-message{
+    margin-bottom: 0;
+    color: red;
+    display: none;
+}
+.synkli-loader {
+    position: relative;
+}
+  
+.synkli-loader:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -35px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 5px dotted #0a1e46;
+    transform-origin: center;
+    animation: synkliLoaderAnimation 1.5s infinite linear;
+}
+  
+@keyframes synkliLoaderAnimation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+  
 @media (max-width: 767px){
     .synkli-form-container {
         padding: 40px 25px!important;

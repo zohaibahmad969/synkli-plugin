@@ -104,6 +104,8 @@ class Synkli_Leads_Admin {
 		register_setting('synkli_leads_email_settings', 'synkli_email_headers');
 		register_setting('synkli_leads_email_settings', 'synkli_email_body');
 		register_setting('synkli_leads_email_settings', 'synkli_email_format');
+		register_setting('synkli_leads_email_settings', 'synkli_form_success_message');
+		register_setting('synkli_leads_email_settings', 'synkli_form_error_message');
     }
 
 	/**
