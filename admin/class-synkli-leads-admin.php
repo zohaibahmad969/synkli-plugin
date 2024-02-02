@@ -115,17 +115,19 @@ class Synkli_Leads_Admin {
 	 * @since    1.0.0
 	 */
 	public function synkli_initialize_settings() {
-        // Register setting for Synkli API Key
+        
         register_setting( 'synkli_leads_settings', 'synkli_api_key' );
-
-        // Register setting for Synkli Secret Key
         register_setting( 'synkli_leads_settings', 'synkli_secret_key' );
 
-		// Register setting for Synkli Form Style Type
 		register_setting('synkli_leads_settings', 'synkli_form_style_type');
-
-		// Register setting for Synkli Form Style Custom Css Code
 		register_setting('synkli_leads_settings', 'synkli_custom_css');
+
+		register_setting('synkli_leads_settings', 'synkli_email_to');
+		register_setting('synkli_leads_settings', 'synkli_email_from');
+		register_setting('synkli_leads_settings', 'synkli_email_subject');
+		register_setting('synkli_leads_settings', 'synkli_email_headers');
+		register_setting('synkli_leads_settings', 'synkli_email_body');
+		register_setting('synkli_leads_settings', 'synkli_email_format');
     }
 
 	/**
@@ -167,7 +169,7 @@ class Synkli_Leads_Admin {
 		}
 
 	
-		add_submenu_page( 'synkli_leads', 'Emails', 'Emails', 'manage_options', 'synkli-leads-style', 'synkli_leads_dashboard_emails_page' );
+		add_submenu_page( 'synkli_leads', 'Emails', 'Emails', 'manage_options', 'synkli-leads-emails', 'synkli_leads_dashboard_emails_page' );
 		
 		if (!function_exists('synkli_leads_dashboard_emails_page')) {
 			function synkli_leads_dashboard_emails_page()

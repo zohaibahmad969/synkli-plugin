@@ -14,7 +14,7 @@
 ?>
 
 
-<div class="wrap">
+<div class="wrap synkli-admin-menu-page-wrap">
     <h2><?php echo __('Synkli Leads Settings', 'synkli-leads'); ?></h2>
     <form method="post" action="options.php">
         <?php settings_fields( 'synkli_leads_settings' ); ?>

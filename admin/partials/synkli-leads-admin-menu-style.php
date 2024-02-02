@@ -15,7 +15,7 @@
 ?>
 
 
-<div class="wrap">
+<div class="wrap synkli-admin-menu-page-wrap">
     <h2><?php echo __('Synkli Leads Style', 'synkli-leads'); ?></h2>
     <p><?php echo __('Choose a style for your Synkli Leads form:', 'synkli-leads'); ?></p>
     <form method="post" action="options.php">

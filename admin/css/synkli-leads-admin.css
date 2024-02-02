@@ -2,7 +2,21 @@
  * All of the CSS for your admin-specific functionality should be
  * included in this file.
  */
- 
+
+
+.synkli-admin-menu-page-wrap .form-table th {
+    width: 150px;
+}
+.synkli-admin-menu-page-wrap .form-table input[type="text"],
+.synkli-admin-menu-page-wrap .form-table input[type="email"],
+.synkli-admin-menu-page-wrap .form-table input[type="password"],
+.synkli-admin-menu-page-wrap .form-table textarea {
+    max-width: 600px;
+    width: 100%;
+}
+.synkli-admin-menu-page-wrap .form-table textarea {
+    min-height: 400px;
+}
  .synkli-css-editor{
     width: 100%;
     max-width: 600px;
