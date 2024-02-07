@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
 	$('input[name="synkli_form_style_type"]').change(function() {
-		if ($(this).val() === 'custom-style') {
+		if ($(this).val() === 'synkli-style-custom') {
 			$('#custom-style-editor').show();
 			
 		} else {

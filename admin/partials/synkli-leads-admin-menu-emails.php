@@ -14,51 +14,59 @@
 
 ?>
 
-
-<div class="wrap synkli-admin-menu-page-wrap">
-    <h2><?php echo __('Synkli Leads Emails', 'synkli-leads'); ?></h2>
-    <form method="post" action="options.php">
-        <?php settings_fields('synkli_leads_email_settings'); ?>
-        <table class="form-table">
-            <tr valign="top">
-                <th scope="row"><?php echo __('To', 'synkli-leads'); ?></th>
-                <td><input type="text" name="synkli_email_to" value="<?php echo esc_attr(get_option('synkli_email_to')); ?>" /></td>
-            </tr>
-            <tr valign="top">
-                <th scope="row"><?php echo __('From', 'synkli-leads'); ?></th>
-                <td><input type="text" name="synkli_email_from" value="<?php echo esc_attr(get_option('synkli_email_from')); ?>" /></td>
-            </tr>
-            <tr valign="top">
-                <th scope="row"><?php echo __('Subject', 'synkli-leads'); ?></th>
+<div class="synkli-wrap synkli-dashboard">
+    <div class="synkli-header">
+        <h2 class="synkli-header--title">Emails</h2>
+        <!-- <p class="synkli-header--description">Synkli leads email settings. </p> -->
+    </div>
+    <div class="synkli-navbar--wrap">
+        <?php include(dirname (__FILE__) . '/synkli-leads-admin-navbar.php'); ?>
+    </div>
+    <div class="synkli-body">
+        <h3><?php echo __('Please setup emails:', 'synkli-leads'); ?></h3>
+        <form method="post" action="options.php" class="synkli-form synkli-form-emails">
+            <?php settings_fields('synkli_leads_email_settings'); ?>
+            <div class="form-group-row">
+                <div class="form-group">
+                    <label><?php echo __('To', 'synkli-leads'); ?></label>
+                    <input type="text" name="synkli_email_to" value="<?php echo esc_attr(get_option('synkli_email_to')); ?>" />
+                </div>
+                <div class="form-group">
+                    <label><?php echo __('From', 'synkli-leads'); ?></label>
+                    <td><input type="text" name="synkli_email_from" value="<?php echo esc_attr(get_option('synkli_email_from')); ?>" /></td>
+                </div>
+            </div>
+            <div class="form-group">
+                <label><?php echo __('Subject', 'synkli-leads'); ?></label>
                 <td><input type="text" name="synkli_email_subject" value="<?php echo esc_attr(get_option('synkli_email_subject')); ?>" /></td>
-            </tr>
-            <tr valign="top" style="display: none;">
-                <th scope="row"><?php echo __('Additional Headers', 'synkli-leads'); ?></th>
+            </div>
+            <div class="form-group" style="display: none;">
+                <label><?php echo __('Additional Headers', 'synkli-leads'); ?></label>
                 <td><input type="text" name="synkli_email_headers" value="<?php echo esc_attr(get_option('synkli_email_headers')); ?>" /></td>
-            </tr>
-            <tr valign="top">
-                <th scope="row"><?php echo __('Plain or HTML Email', 'synkli-leads'); ?></th>
-                <td>
-                    <select name="synkli_email_format">
-                        <option value="plain" <?php selected(get_option('synkli_email_format'), 'plain'); ?>><?php echo __('Plain', 'synkli-leads'); ?></option>
-                        <option value="html" <?php selected(get_option('synkli_email_format'), 'html'); ?>><?php echo __('HTML', 'synkli-leads'); ?></option>
-                    </select>
-                </td>
-            </tr>
-            <tr valign="top">
-                <th scope="row"><?php echo __('Email Success Message', 'synkli-leads'); ?></th>
-                <td><input type="text" name="synkli_form_success_message" value="<?php echo esc_attr(get_option('synkli_form_success_message')); ?>" /></td>
-            </tr>
-            
-            <tr valign="top">
-                <th scope="row"><?php echo __('Email Error Message', 'synkli-leads'); ?></th>
-                <td><input type="text" name="synkli_form_error_message" value="<?php echo esc_attr(get_option('synkli_form_error_message')); ?>" /></td>
-            </tr>
-            <tr valign="top">
-                <th scope="row"><?php echo __('Message Body', 'synkli-leads'); ?></th>
-                <td><textarea name="synkli_email_body"><?php echo esc_textarea(get_option('synkli_email_body')); ?></textarea></td>
-            </tr>
-        </table>
-        <?php submit_button(); ?>
-    </form>
+            </div>
+            <div class="form-group">
+                <label><?php echo __('Plain or HTML Email', 'synkli-leads'); ?></label>
+                <select name="synkli_email_format">
+                    <option value="plain" <?php selected(get_option('synkli_email_format'), 'plain'); ?>><?php echo __('Plain', 'synkli-leads'); ?></option>
+                    <option value="html" <?php selected(get_option('synkli_email_format'), 'html'); ?>><?php echo __('HTML', 'synkli-leads'); ?></option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label><?php echo __('Email Success Message', 'synkli-leads'); ?></label>
+                <input type="text" name="synkli_form_success_message" value="<?php echo esc_attr(get_option('synkli_form_success_message')); ?>" />
+            </div>
+            <div class="form-group">
+                <label><?php echo __('Email Error Message', 'synkli-leads'); ?></label>
+                <input type="text" name="synkli_form_error_message" value="<?php echo esc_attr(get_option('synkli_form_error_message')); ?>" />
+            </div>
+            <div class="form-group" style="display: none;">
+                <label><?php echo __('Message Body', 'synkli-leads'); ?></label>
+                <textarea name="synkli_email_body"><?php echo esc_textarea(get_option('synkli_email_body')); ?></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" name="submit" id="submit" class="synkli-submit-btn" value="Save Changes">
+            </div>
+        </form>
+    </div>
 </div>
+

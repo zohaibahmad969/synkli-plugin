@@ -69,15 +69,7 @@ class Synkli_Leads_Public {
 
 		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/synkli-leads-public.css', array(), $this->version, 'all' );
 
-		if(get_option('synkli_form_style_type') === 'default-style'){
-			wp_enqueue_style( $this->plugin_name . 'form', plugin_dir_url( __FILE__ ) . 'css/synkli-leads-form-default.css', array(), $this->version, 'all' );
-		}else if(get_option('synkli_form_style_type') === 'synkli-style-light'){
-			wp_enqueue_style( $this->plugin_name . 'form', plugin_dir_url( __FILE__ ) . 'css/synkli-leads-form-synkli-light.css', array(), $this->version, 'all' );
-		}else if(get_option('synkli_form_style_type') === 'synkli-style-dark'){
-			wp_enqueue_style( $this->plugin_name . 'form', plugin_dir_url( __FILE__ ) . 'css/synkli-leads-form-synkli-dark.css', array(), $this->version, 'all' );
-		}else if(get_option('synkli_form_style_type') === 'custom-style'){
-			// custom css code will be loaded after form shortcode
-		}
+		wp_enqueue_style( $this->plugin_name . 'form', plugin_dir_url( __FILE__ ) . 'css/synkli-leads-form-style.css', array(), $this->version, 'all' );
 
 	}
 
