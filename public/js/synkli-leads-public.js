@@ -3,20 +3,15 @@ jQuery(document).ready(function($) {
         // Prevent the default form submission
         event.preventDefault();
 
-		$(".synkli-form-field-submit-btn-wrap").addClass('synkli-loader');
-
 		let crnt = $(this);
-
-        // Your API key and secret key
         var apiKey = crnt.find("#synkli_api_key").val();
-        var secretKey = crnt.find("#synkli_secret_key").val();
-
-		// Check if apiKey or secretKey is empty
-		if (!apiKey || !secretKey) {
-			// Handle the case where either apiKey or secretKey is empty
-			alert('API key or secret key is missing');
+		if (!apiKey) {
+			alert('API key is missing');
 			return;
 		}
+
+
+		$(".synkli-form-field-submit-btn-wrap").addClass('synkli-loader');
 
 		// Sanitize form field values
 		var formData = {};
@@ -24,19 +19,18 @@ jQuery(document).ready(function($) {
 			formData[item.name] = item.value.replace(/<[^>]*>?/gm, '');
 		});
 
-		// Add API key and secret key to the form data
-		formData['api_key'] = apiKey;
-		formData['secret_key'] = secretKey;
-
 		// Add the domain name to the formData object
 		formData['domain'] = getDomainFromUrl(window.location.href);
 
 		// AJAX request
 		$.ajax({
 			type: 'POST',
-			url: 'https://api.synkli.dev/api/users/external-contact-form',
+			url: 'https://a522-206-42-117-194.ngrok-free.app/api/third-party/lead/create',
 			data: formData,
 			dataType: 'json',
+			headers: {
+				'x-api-key' : apiKey
+			},
 			success: function(response) {
 				// Handle success response
 				console.log('API call successful:', response);
@@ -78,10 +72,21 @@ jQuery(document).ready(function($) {
 
 
 			},
-			error: function(xhr, status, error) {
+			error: function(error) {
 				// Handle error response
-				console.error('Error:', error);
-				// You can display an error message or handle the error as needed
+
+				if(!error.responseText){
+					$(".synkli-form-error-message").append('Synkli server is temporarily down.');
+					return false;
+				}
+				// Handle error
+				var errors = JSON.parse(error.responseText).errors;
+				errors.forEach(function(errorMessage) {
+					console.log(errorMessage);
+					$(".synkli-form-error-message").append(errorMessage + '<br>');
+				});
+				$(".synkli-form-field-submit-btn-wrap").removeClass('synkli-loader');
+				$(".synkli-form-error-message").show()
 			}
 		});
 

@@ -30,10 +30,6 @@
                 <input type="text" name="synkli_api_key" value="<?php echo esc_attr( get_option( 'synkli_api_key' ) ); ?>" />
             </div>
             <div class="form-group">
-                <label><?php echo __('Synkli Secret Key', 'synkli-leads'); ?></label>
-                <input type="text" name="synkli_secret_key" value="<?php echo esc_attr( get_option( 'synkli_secret_key' ) ); ?>" />
-            </div>
-            <div class="form-group">
                 <input type="submit" name="submit" id="submit" class="synkli-submit-btn" value="Save Changes">
             </div>
         </form>

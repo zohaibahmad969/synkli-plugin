@@ -93,7 +93,6 @@ class Synkli_Leads_Admin {
 	public function synkli_initialize_settings() {
         
         register_setting( 'synkli_leads_api_settings', 'synkli_api_key' );
-        register_setting( 'synkli_leads_api_settings', 'synkli_secret_key' );
 
 		register_setting('synkli_leads_style_settings', 'synkli_form_style_type');
 		register_setting('synkli_leads_style_settings', 'synkli_custom_css');

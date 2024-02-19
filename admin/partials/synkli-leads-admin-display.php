@@ -25,7 +25,7 @@
     </div>
     <div class="synkli-body">
         <?php
-            if( get_option( 'synkli_api_key' ) !== "" || get_option( 'synkli_secret_key' ) !== "" ){
+            if( get_option( 'synkli_api_key' ) !== "" ){
             ?>
                 <div class="synkli-activation--notice">
                     <h4 class="synkli-activation--notice-subtitle">Congratulations!</h4>

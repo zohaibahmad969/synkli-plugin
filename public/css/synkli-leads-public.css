@@ -155,6 +155,7 @@
 .synkli-style-dark .synkli-form-field input[type="tel"],
 .synkli-style-dark .synkli-form-field textarea {
     background-color: #162754;
+    color: white;
 }
 .synkli-style-dark .synkli-form-field input[type="submit"] {
     background-color: #B695F8;
