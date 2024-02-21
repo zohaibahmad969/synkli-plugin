@@ -17,13 +17,13 @@
 	// First Name
 	$output .= '<div class="synkli-form-field">';
 	$output .= '<label for="first_name">First Name:</label>';
-	$output .= '<input type="text" name="first_name" id="first_name" required>';
+	$output .= '<input type="text" name="first_name" class="text-field-only" id="first_name" required>';
 	$output .= '</div>';
 	
 	// Last Name
 	$output .= '<div class="synkli-form-field">';
 	$output .= '<label for="last_name">Last Name:</label>';
-	$output .= '<input type="text" name="last_name" id="last_name" required>';
+	$output .= '<input type="text" name="last_name" class="text-field-only" id="last_name" required>';
 	$output .= '</div>';
 
 	$output .= '</div>';
@@ -31,29 +31,30 @@
 	// Email
 	$output .= '<div class="synkli-form-field">';
 	$output .= '<label for="email">Email:</label>';
-	$output .= '<input type="email" name="email" id="email" required>';
+	$output .= '<input type="email" name="email" id="email" class="email-field-only" required>';
 	$output .= '</div>';
 	
 	// Phone
 	$output .= '<div class="synkli-form-field">';
 	$output .= '<label for="phone">Phone:</label>';
-	$output .= '<input type="tel" name="phone" id="phone" required>';
+	$output .= '<input type="tel" name="phone_number" id="phone" class="phone-field-only" required>';
 	$output .= '</div>';
 	
 	// Message
 	$output .= '<div class="synkli-form-field">';
 	$output .= '<label for="message">Message:</label>';
-	$output .= '<textarea name="message" id="message" required></textarea>';
+	$output .= '<textarea name="message" id="message" class="textNumberString-field-only" required></textarea>';
+	$output .= '</div>';
+
+	// Synkli Messages
+	$output .= '<div class="synkli-form-messages">';
+	$output .= '<p class="synkli-form-success-message">'.get_option("synkli_form_success_message", "Your data has been saved.").'</p>';
+	$output .= '<p class="synkli-form-error-message"></p>';
 	$output .= '</div>';
 	
 	// Submit Button
 	$output .= '<div class="synkli-form-field synkli-form-field-submit-btn-wrap">';
 	$output .= '<input type="submit" value="Submit">';
-	$output .= '</div>';
-
-	$output .= '<div class="synkli-form-messages">';
-	$output .= '<p class="synkli-form-success-message">'.get_option("synkli_form_success_message", "Your data has been saved.").'</p>';
-	$output .= '<p class="synkli-form-error-message">'.get_option("synkli_form_error_message", "Some error occured. Please try again.").'</p>';
 	$output .= '</div>';
 	
 	$output .= '</form>';
