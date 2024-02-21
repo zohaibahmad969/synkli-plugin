@@ -55,7 +55,7 @@
                 <label><?php echo __('Email Success Message', 'synkli-leads'); ?></label>
                 <input type="text" name="synkli_form_success_message" value="<?php echo esc_attr(get_option('synkli_form_success_message')); ?>" />
             </div>
-            <div class="form-group">
+            <div class="form-group" style="display: none;">
                 <label><?php echo __('Email Error Message', 'synkli-leads'); ?></label>
                 <input type="text" name="synkli_form_error_message" value="<?php echo esc_attr(get_option('synkli_form_error_message')); ?>" />
             </div>
