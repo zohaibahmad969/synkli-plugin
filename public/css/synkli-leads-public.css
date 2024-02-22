@@ -59,7 +59,7 @@
     width: 100%;
     padding: 10px 20px;
     border: 0;
-    border-radius: 80px;
+    border-radius: 4px;
     box-sizing: border-box;
     font-size: 18px;
     min-height: 40px;
@@ -67,8 +67,7 @@
 }
 
 .synkli-form-container .synkli-form-field textarea {
-    min-height: 100px;
-    border-radius: 25px;
+    min-height: 130px;
 }
 
 .synkli-form-container .synkli-form-field-submit-btn-wrap{
