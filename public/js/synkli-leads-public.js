@@ -112,6 +112,7 @@ jQuery(document).ready(function($) {
     $('#synkli_leads_form').submit(function(event) {
         // Prevent the default form submission
         event.preventDefault();
+		$(".synkli-form-error-message").html('');
 
 		let crnt = $(this);
         var apiKey = crnt.find("#synkli_api_key").val();

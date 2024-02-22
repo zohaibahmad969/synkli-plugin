@@ -7,6 +7,10 @@
         <span class="dashicons dashicons-admin-network"></span>
         <span class="synkli-navbar--item-title">Connection</span>
     </li>
+    <li class="synkli-navbar--item <?= strpos($_SERVER['REQUEST_URI'], 'page=synkli-leads-content') !== false ? "synkli-navbar--item-active" : ""; ?>" onclick="window.location.href='<?= admin_url() . '/admin.php?page=synkli-leads-content' ?>'">
+        <span class="dashicons dashicons-edit"></span>
+        <span class="synkli-navbar--item-title">Content</span>
+    </li>
     <li class="synkli-navbar--item <?= strpos($_SERVER['REQUEST_URI'], 'page=synkli-leads-style') !== false ? "synkli-navbar--item-active" : ""; ?>" onclick="window.location.href='<?= admin_url() . '/admin.php?page=synkli-leads-style' ?>'">
         <span class="dashicons dashicons-admin-appearance"></span>
         <span class="synkli-navbar--item-title">Style</span>

@@ -82,7 +82,7 @@ class Synkli_Leads_Public {
 	public function enqueue_scripts() {
 
 		wp_enqueue_script( $this->plugin_name . '-intlTelInput', 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.0/js/intlTelInput.min.js', array( 'jquery' ), $this->version, false );
-		wp_enqueue_script( $this->plugin_name . '-inputmask', 'ttps://cdnjs.cloudflare.com/ajax/libs/inputmask/4.0.8/jquery.inputmask.bundle.min.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name . '-inputmask', 'https://cdnjs.cloudflare.com/ajax/libs/inputmask/4.0.8/jquery.inputmask.bundle.min.js', array( 'jquery' ), $this->version, false );
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/synkli-leads-public.js', array( 'jquery' ), $this->version, false );
 
 		// Localize the script with the ajaxurl
@@ -118,10 +118,11 @@ class Synkli_Leads_Public {
         $message = isset($_POST['message']) ? sanitize_textarea_field($_POST['message']) : '';
 
         // Email configuration
-        $to = get_option('synkli_email_to', get_option('admin_email')); 
-        $from = get_option('synkli_email_from', get_option('admin_email'));
-        $subject = get_option('synkli_email_subject', 'Synkli Form Submission');
-		$email_format = get_option('synkli_email_format', 'html');
+        $to = get_option('synkli_email_to') !== '' ? get_option('synkli_email_to') : get_option('admin_email');
+		$from = get_option('synkli_email_from') !== '' ? get_option('synkli_email_from') : get_option('admin_email');
+		$subject = get_option('synkli_email_subject') !== '' ? get_option('synkli_email_subject') : 'Synkli Form Submission';
+		$email_format = get_option('synkli_email_format') !== '' ? get_option('synkli_email_format') : 'html';
+
 		$content_type = $email_format === 'html' ? 'text/html' : 'text/plain';
 		$headers = array(
 			'Content-Type: ' . $content_type . '; charset=UTF-8',

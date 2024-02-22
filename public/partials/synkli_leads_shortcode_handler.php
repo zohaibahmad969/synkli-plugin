@@ -5,8 +5,8 @@
 
 	// Generate the HTML for the form
 	$output .= '<form method="post" id="synkli_leads_form" action="' . esc_url( admin_url( 'admin-post.php' ) ) . '">';
-	$output .= '<h2 class="synkli-form-title">Contact <span>Us</span></h2>';
-	$output .= '<p class="synkli-form-description">We would love to hear from you! Please fill out the form below, and we will get back to you as soon as possible.</p>';
+	$output .= '<h2 class="synkli-form-title">'.(get_option("synkli_form_title") !== '' ? get_option("synkli_form_title") : 'Contact <span>Us</span>' ).'</h2>';
+	$output .= '<p class="synkli-form-description">'.(get_option("synkli_form_description") !== '' ? get_option("synkli_form_description") : 'We would love to hear from you! Please fill out the form below, and we will get back to you as soon as possible.' ).'</p>';
 	$output .= '<input type="hidden" id="synkli_api_key" name="api_key" value="'.get_option("synkli_api_key").'">';
 	
 	$output .= '<div class="synkli-form-fields-wrap">';
@@ -48,7 +48,7 @@
 
 	// Synkli Messages
 	$output .= '<div class="synkli-form-messages">';
-	$output .= '<p class="synkli-form-success-message">'.get_option("synkli_form_success_message", "Your data has been saved.").'</p>';
+	$output .= '<p class="synkli-form-success-message">'.(get_option("synkli_form_success_message") !== '' ? get_option("synkli_form_success_message") : 'Your data has been saved.' ).'</p>';
 	$output .= '<p class="synkli-form-error-message"></p>';
 	$output .= '</div>';
 	

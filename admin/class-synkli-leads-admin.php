@@ -94,6 +94,9 @@ class Synkli_Leads_Admin {
         
         register_setting( 'synkli_leads_api_settings', 'synkli_api_key' );
 
+		register_setting('synkli_leads_content_settings', 'synkli_form_title');
+		register_setting('synkli_leads_content_settings', 'synkli_form_description');
+		
 		register_setting('synkli_leads_style_settings', 'synkli_form_style_type');
 		register_setting('synkli_leads_style_settings', 'synkli_custom_css');
 
@@ -130,6 +133,17 @@ class Synkli_Leads_Admin {
 			function synkli_leads_dashboard_connection_page()
 			{
 			   include(dirname (__FILE__) . '/partials/synkli-leads-admin-menu-connection.php');
+				
+			}
+		}
+
+
+		add_submenu_page( 'synkli_leads', 'Content', 'Content', 'manage_options', 'synkli-leads-content', 'synkli_leads_dashboard_content_page' );
+		
+		if (!function_exists('synkli_leads_dashboard_content_page')) {
+			function synkli_leads_dashboard_content_page()
+			{
+			   include(dirname (__FILE__) . '/partials/synkli-leads-admin-menu-content.php');
 				
 			}
 		}
