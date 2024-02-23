@@ -137,7 +137,13 @@ jQuery(document).ready(function($) {
 		$.ajax({
 			type: 'POST',
 			url: 'https://api.synkli.dev/api/third-party/lead/create',
-			data: formData,
+			data: {
+				"first_name": $("#leadFirstName").val(),
+				"last_name": $("#leadLastName").val(),
+				"phone_number": leadPhone.getNumber(),
+				"email": $("#leadEmail").val(),
+				"message": $("#leadMessage").val(),
+			  },
 			dataType: 'json',
 			headers: {
 				'x-api-key' : apiKey

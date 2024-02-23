@@ -17,13 +17,13 @@
 	// First Name
 	$output .= '<div class="synkli-form-field">';
 	$output .= '<label for="first_name">First Name:</label>';
-	$output .= '<input type="text" name="first_name" class="text-field-only" id="first_name" required>';
+	$output .= '<input type="text" name="first_name" class="text-field-only" id="leadFirstName" required>';
 	$output .= '</div>';
 	
 	// Last Name
 	$output .= '<div class="synkli-form-field">';
 	$output .= '<label for="last_name">Last Name:</label>';
-	$output .= '<input type="text" name="last_name" class="text-field-only" id="last_name" required>';
+	$output .= '<input type="text" name="last_name" class="text-field-only" id="leadLastName" required>';
 	$output .= '</div>';
 
 	$output .= '</div>';
@@ -31,7 +31,7 @@
 	// Email
 	$output .= '<div class="synkli-form-field">';
 	$output .= '<label for="email">Email:</label>';
-	$output .= '<input type="email" name="email" id="email" class="email-field-only" required>';
+	$output .= '<input type="email" name="email" id="leadEmail" class="email-field-only" required>';
 	$output .= '</div>';
 	
 	// Phone
@@ -43,7 +43,7 @@
 	// Message
 	$output .= '<div class="synkli-form-field">';
 	$output .= '<label for="message">Message:</label>';
-	$output .= '<textarea name="message" id="message" class="textNumberString-field-only" required></textarea>';
+	$output .= '<textarea name="message" id="leadMessage" class="textNumberString-field-only" required></textarea>';
 	$output .= '</div>';
 
 	// Synkli Messages
