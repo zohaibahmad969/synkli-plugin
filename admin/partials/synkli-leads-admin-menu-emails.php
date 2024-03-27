@@ -23,7 +23,7 @@
         <?php include(dirname (__FILE__) . '/synkli-leads-admin-navbar.php'); ?>
     </div>
     <div class="synkli-body">
-        <h3><?php echo __('Please setup emails:', 'synkli-leads'); ?></h3>
+        <h3><?php echo __('Please setup admin email notification:', 'synkli-leads'); ?></h3>
         <form method="post" action="options.php" class="synkli-form synkli-form-emails">
             <?php settings_fields('synkli_leads_email_settings'); ?>
             <div class="form-group-row">

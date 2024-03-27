@@ -19,6 +19,10 @@
         <span class="dashicons dashicons-email"></span>
         <span class="synkli-navbar--item-title">Emails</span>
     </li>
+    <li class="synkli-navbar--item <?= strpos($_SERVER['REQUEST_URI'], 'page=synkli-leads-shortcode') !== false ? "synkli-navbar--item-active" : ""; ?>" onclick="window.location.href='<?= admin_url() . '/admin.php?page=synkli-leads-shortcode' ?>'">
+        <span class="dashicons dashicons-shortcode"></span>
+        <span class="synkli-navbar--item-title">Shortcode</span>
+    </li>
     <li class="synkli-navbar--item <?= strpos($_SERVER['REQUEST_URI'], 'page=synkli-leads-help') !== false ? "synkli-navbar--item-active" : ""; ?>" onclick="window.location.href='<?= admin_url() . '/admin.php?page=synkli-leads-help' ?>'">
         <span class="dashicons dashicons-editor-help"></span>
         <span class="synkli-navbar--item-title">Help</span>

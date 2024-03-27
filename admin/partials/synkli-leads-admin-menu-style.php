@@ -31,7 +31,6 @@
                 <tr valign="top">
                     <th scope="row">
                         <h3 class="synkli-form-table-th-title"><?php echo __('Form Style', 'synkli-leads'); ?></h3>
-                        <p class="synkli-form-table-th-description"><?php echo __('Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'synkli-leads'); ?></p>
                     </th>
                     <td>
                         <label>

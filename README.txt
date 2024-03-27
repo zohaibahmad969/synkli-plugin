@@ -1,114 +1,73 @@
-=== Plugin Name ===
-Contributors: (this should be a list of wordpress.org userid's)
-Donate link: https://https://www.synkli.com/
-Tags: comments, spam
-Requires at least: 3.0.1
-Tested up to: 3.4
-Stable tag: 4.3
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+=== SYNKLI Leads === 
 
-Here is a short description of the plugin.  This should be no more than 150 characters.  No markup here.
+Introducing SYNKLI Leads: Effortless Lead Generation and Management
 
 == Description ==
+Unlock the power of seamless lead generation and management with SYNKLI Leads,
+the ultimate plugin designed to elevate your WordPress website's capabilities. 
+SYNKLI Leads integrates seamlessly with SYNKLI CRM, ensuring that every lead 
+captured through your website is effortlessly synced with your CRM system, 
+empowering you to nurture and convert leads with ease.
 
-This is the long description.  No limit, and you can use Markdown (as well as in the following sections).
+== Features ==
 
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
-
-A few notes about the sections above:
-
-*   "Contributors" is a comma separated list of wp.org/wp-plugins.org usernames
-*   "Tags" is a comma separated list of tags that apply to the plugin
-*   "Requires at least" is the lowest version that the plugin will work on
-*   "Tested up to" is the highest version that you've *successfully used to test the plugin*. Note that it might work on
-higher versions... this is just the highest one you've verified.
-*   Stable tag should indicate the Subversion "tag" of the latest stable version, or "trunk," if you use `/trunk/` for
-stable.
-
-    Note that the `readme.txt` of the stable tag is the one that is considered the defining one for the plugin, so
-if the `/trunk/readme.txt` file says that the stable tag is `4.3`, then it is `/tags/4.3/readme.txt` that'll be used
-for displaying information about the plugin.  In this situation, the only thing considered from the trunk `readme.txt`
-is the stable tag pointer.  Thus, if you develop in trunk, you can update the trunk `readme.txt` to reflect changes in
-your in-development version, without having that information incorrectly disclosed about the current stable version
-that lacks those changes -- as long as the trunk's `readme.txt` points to the correct stable tag.
-
-    If no stable tag is provided, it is assumed that trunk is stable, but you should specify "trunk" if that's where
-you put the stable version, in order to eliminate any doubt.
+1. Effortless Integration: Integrate a user-friendly form seamlessly into your  WordPress website, allowing visitors to submit their information with ease.
+2. Automated Lead Sync: Bid farewell to manual data entry. All form submissions are automatically synchronized with your SYNKLI CRM account, ensuring that no lead slips through the cracks.
+3. Tailored Fields: Customize the form fields to capture the specific information you need from your leads. From basic contact details to custom qualifiers, tailor the form to suit your unique requirements.
+4. Real-time Updates: Stay in the loop with real-time updates of leads directly within your SYNKLI CRM dashboard. Instantly access newly captured leads and take action without delay.
+5. Streamlined Workflow: Say goodbye to tedious manual processes. SYNKLI Leads streamlines your lead generation and management process, saving you time and effort so you can focus on what matters most – converting leads into customers.
 
 == Installation ==
 
-This section describes how to install the plugin and get it working.
+1. Download the SYNKLI Leads plugin from the WordPress plugin repository or from the provided link.
+2. Upload the plugin files to the /wp-content/plugins/ directory, or install the plugin directly from the WordPress plugin dashboard.
+3. Activate the plugin through the 'Plugins' menu in WordPress.
+4. Configure the plugin settings by providing your SYNKLI CRM API credentials and customizing the form fields as per your requirements.
 
-e.g.
+== Usage ==
 
-1. Upload `synkli-leads.php` to the `/wp-content/plugins/` directory
-1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Place `<?php do_action('plugin_name_hook'); ?>` in your templates
+1. Navigate to the page or post where you want to display the form.
+2. Add the form using the provided shortcode [synkli_leads_form] or Gutenberg block.
+3. Publish the page or post, and the form will be ready for visitors to submit their information.
 
-== Frequently Asked Questions ==
+== Configuration ==
 
-= A question that someone might have =
+1. Go to the plugin settings page located under the WordPress dashboard.
+2. Enter your SYNKLI CRM API Key.
+3. Customize your form tile and short description about your business.
+4. Choose from the different available form style options.
+5. Setup customized notification email for admin.
+6. Save the settings to apply the changes.
 
-An answer to that question.
+== Requirements ==
 
-= What about foo bar? =
+* WordPress version 4.7 or higher.
+* SYNKLI CRM account with API access.
 
-Answer to foo bar dilemma.
+== Support ==
 
-== Screenshots ==
-
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png`
-(or jpg, jpeg, gif).
-2. This is the second screen shot
+For any queries or assistance regarding the SYNKLI Leads plugin, feel free to contact our support team at support@synkli.com.au
 
 == Changelog ==
 
-= 1.0 =
-* A change since the previous version.
-* Another change.
+* Version 1.0:
+    * Initial release of the SYNKLI Leads plugin.
 
-= 0.5 =
-* List versions from most recent at top to oldest at bottom.
+== Contributing ==
 
-== Upgrade Notice ==
+If you have any suggestions, feature requests, or would like to contribute to the development of this plugin, please visit our GitHub repository here or contact us directly.
 
-= 1.0 =
-Upgrade notices describe the reason a user should upgrade.  No more than 300 characters.
+== License ==
 
-= 0.5 =
-This version fixes a security related bug.  Upgrade immediately.
+This plugin is released under the GNU General Public License v3.0 or later.
 
-== Arbitrary section ==
+== Disclaimer ==
+The SYNKLI Leads plugin is provided as-is, without any warranty or guarantee. We shall not be liable for any damages or losses arising from the use or misuse of this plugin.
 
-You may provide arbitrary sections, in the same format as the ones above.  This may be of use for extremely complicated
-plugins where more information needs to be conveyed that doesn't fit into the categories of "description" or
-"installation."  Arbitrary sections will be shown below the built-in sections outlined above.
+== Credits ==
 
-== A brief Markdown Example ==
+Developed by MMMK Technologies Pvt Ltd.
 
-Ordered list:
+== Download ==
+You can download the latest version of the SYNKLI Leads plugin from the WordPress plugin repository.
 
-1. Some feature
-1. Another feature
-1. Something else about the plugin
-
-Unordered list:
-
-* something
-* something else
-* third thing
-
-Here's a link to [WordPress](http://wordpress.org/ "Your favorite software") and one to [Markdown's Syntax Documentation][markdown syntax].
-Titles are optional, naturally.
-
-[markdown syntax]: http://daringfireball.net/projects/markdown/syntax
-            "Markdown is what the parser uses to process much of the readme file"
-
-Markdown uses email style notation for blockquotes and I've been told:
-> Asterisks for *emphasis*. Double it up  for **strong**.
-
-`<?php code(); // goes in backticks ?>`

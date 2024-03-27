@@ -8,17 +8,17 @@
  * registers the activation and deactivation functions, and defines a function
  * that starts the plugin.
  *
- * @link              https://https://www.synkli.com
+ * @link              https://https://www.synkli.com.au
  * @since             1.0.0
  * @package           Synkli_Leads
  *
  * @wordpress-plugin
  * Plugin Name:       Synkli Leads
- * Plugin URI:        https://https://www.synkli.com/synkli-leads
- * Description:       This plugin provides a contact form which you can add on website. And all the form leads will go to your Synkli account.
+ * Plugin URI:        https://synkli.com.au/
+ * Description:       This plugin provides a Lead Form which you can add on website. And all the form leads will go to your Synkli account.
  * Version:           1.0.0
- * Author:            Zohaib Ahmad
- * Author URI:        https://https://www.synkli.com/
+ * Author:            MMMK Technologies Pvt Ltd
+ * Author URI:        https://mmmkoutsourcing.com/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       synkli-leads

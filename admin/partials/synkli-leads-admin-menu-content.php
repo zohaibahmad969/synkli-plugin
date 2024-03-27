@@ -22,7 +22,7 @@
         <?php include(dirname (__FILE__) . '/synkli-leads-admin-navbar.php'); ?>
     </div>
     <div class="synkli-body">
-        <h3><?php echo __('You can change form content here:', 'synkli-leads'); ?></h3>
+        <h3><?php echo __('You can change form title and short description here:', 'synkli-leads'); ?></h3>
         <form method="post" action="options.php" class="synkli-form synkli-form-emails">
             <?php settings_fields('synkli_leads_content_settings'); ?>
             <div class="form-group">

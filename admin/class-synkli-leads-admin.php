@@ -171,6 +171,17 @@ class Synkli_Leads_Admin {
 		}
 
 
+		add_submenu_page( 'synkli_leads', 'Shortcode', 'Shortcode', 'manage_options', 'synkli-leads-shortcode', 'synkli_leads_dashboard_shortcode_page' );
+
+		if (!function_exists('synkli_leads_dashboard_shortcode_page')) {
+			function synkli_leads_dashboard_shortcode_page()
+			{
+			   include(dirname (__FILE__) . '/partials/synkli-leads-admin-menu-shortcode.php');
+				
+			}
+		}
+
+
 		add_submenu_page( 'synkli_leads', 'Help', 'Help', 'manage_options', 'synkli-leads-help', 'synkli_leads_dashboard_help_page' );
 
 		if (!function_exists('synkli_leads_dashboard_help_page')) {
