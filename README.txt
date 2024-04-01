@@ -3,11 +3,8 @@
 Introducing SYNKLI Leads: Effortless Lead Generation and Management
 
 == Description ==
-Unlock the power of seamless lead generation and management with SYNKLI Leads,
-the ultimate plugin designed to elevate your WordPress website's capabilities. 
-SYNKLI Leads integrates seamlessly with SYNKLI CRM, ensuring that every lead 
-captured through your website is effortlessly synced with your CRM system, 
-empowering you to nurture and convert leads with ease.
+
+Unlock the power of seamless lead generation and management with SYNKLI Leads, the ultimate plugin designed to elevate your WordPress website's capabilities. SYNKLI Leads integrates seamlessly with SYNKLI CRM, ensuring that every lead captured through your website is effortlessly synced with your CRM system, empowering you to nurture and convert leads with ease.
 
 == Features ==
 
@@ -27,7 +24,7 @@ empowering you to nurture and convert leads with ease.
 == Usage ==
 
 1. Navigate to the page or post where you want to display the form.
-2. Add the form using the provided shortcode [synkli_leads_form] or Gutenberg block.
+2. Add the form using the provided shortcode [synkli_leads_form].
 3. Publish the page or post, and the form will be ready for visitors to submit their information.
 
 == Configuration ==
