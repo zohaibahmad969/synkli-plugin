@@ -1,5 +1,15 @@
 === SYNKLI Leads === 
 
+Contributors:      wordpressdotorg
+Requires at least: 6.3
+Tested up to:      6.4
+Requires PHP:      7.0
+Stable tag:        1.0.0
+License:           GPLv2 or later
+License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+Tags:              Synkli CRM, Synkli Leads, Synkli
+
+
 Introducing SYNKLI Leads: Effortless Lead Generation and Management
 
 == Description ==
@@ -63,7 +73,7 @@ The SYNKLI Leads plugin is provided as-is, without any warranty or guarantee. We
 
 == Credits ==
 
-Developed by MMMK Technologies Pvt Ltd.
+Developed by Synkli.
 
 == Download ==
 You can download the latest version of the SYNKLI Leads plugin from the WordPress plugin repository.

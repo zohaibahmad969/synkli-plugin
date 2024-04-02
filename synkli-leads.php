@@ -17,8 +17,8 @@
  * Plugin URI:        https://synkli.com.au/
  * Description:       This plugin provides a Lead Form which you can add on website. And all the form leads will go to your Synkli account.
  * Version:           1.0.0
- * Author:            MMMK Technologies Pvt Ltd
- * Author URI:        https://mmmkoutsourcing.com/
+ * Author:            Synkli
+ * Author URI:        https://synkli.com.au
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       synkli-leads
