@@ -110,6 +110,13 @@ class Synkli_Leads_Public {
 	 * @since    1.0.0
 	 */
 	public function synkli_send_email_callback() {
+
+		// Verify nonce
+		if ( !isset( $_POST['synkli_email_nonce'] ) || !wp_verify_nonce( $_POST['synkli_email_nonce'], 'synkli_send_email' ) ) {
+			// Nonce verification failed, handle the error
+			wp_send_json_error( 'Nonce verification failed' );
+		}
+		
         // Retrieve form data
         $first_name = isset($_POST['first_name']) ? sanitize_text_field($_POST['first_name']) : '';
         $last_name = isset($_POST['last_name']) ? sanitize_text_field($_POST['last_name']) : '';

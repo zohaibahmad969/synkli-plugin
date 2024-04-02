@@ -21,7 +21,7 @@
         <!-- <p class="synkli-header--description">Synkli leads dashboard area. </p> -->
     </div>
     <div class="synkli-navbar--wrap">
-        <?php include(dirname (__FILE__) . '/synkli-leads-admin-navbar.php'); ?>
+        <?php include plugin_dir_path( __FILE__ ) . 'synkli-leads-admin-navbar.php'; ?>
     </div>
     <div class="synkli-body">
         <?php
@@ -35,15 +35,15 @@
                         <br><br>
                         Explore the intuitive features, streamline your workflow, and maximize the potential of your website to capture and manage leads effectively.
                     </p>
-                    <img class="synkli-activation--notice-bg-image" src="<?= dirname( plugin_dir_url( __FILE__ ) ) . '/images/synkli-logo-icon.png' ?>">
+                    <img class="synkli-activation--notice-bg-image" src="<?php echo esc_url( plugin_dir_url( dirname( __FILE__ ) ) . '/images/synkli-logo-icon.png' ); ?>">
                 </div>
             <?php
             }else{
             ?>
-                <div class="synkli-activation--notice" style="background-image:url(<?= dirname( plugin_dir_url( __FILE__ ) ) . '/images/notice-bg.png' ?>);min-height: 320px;">
+                <div class="synkli-activation--notice" style="background-image:url(<?php echo esc_url( plugin_dir_url( dirname( __FILE__ ) ) . '/images/notice-bg.png' ); ?>);min-height: 320px;">
                     <h4 class="synkli-activation--notice-subtitle text-black">Setup!</h4>
                     <h2 class="synkli-activation--notice-title">Please set up the connection to Synkli in order to send leads to your Synkli account.</h2>
-                    <a href="<?= admin_url() . '/admin.php?page=synkli-leads-connection' ?>" class="synkli-link-btn">Connect Now</a>
+                    <a href="<?php echo esc_url( admin_url( 'admin.php?page=synkli-leads-connection' ) ); ?>" class="synkli-link-btn">Connect Now</a>
                 </div>
             <?php    
             }

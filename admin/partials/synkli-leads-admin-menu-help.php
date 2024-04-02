@@ -5,7 +5,7 @@
         <!-- <p class="synkli-header--description">Reach out to us anytime. </p> -->
     </div>
     <div class="synkli-navbar--wrap">
-        <?php include(dirname (__FILE__) . '/synkli-leads-admin-navbar.php'); ?>
+        <?php include plugin_dir_path( __FILE__ ) . 'synkli-leads-admin-navbar.php'; ?>
     </div>
     <p class="synkli-activation--notice-description">
         If you ever find yourself in need of assistance or have any questions, please don't hesitate to reach out to us. 

@@ -19,14 +19,14 @@
         <!-- <p class="synkli-header--description">Setup the Synkli connection to plugin. </p> -->
     </div>
     <div class="synkli-navbar--wrap">
-        <?php include(dirname (__FILE__) . '/synkli-leads-admin-navbar.php'); ?>
+        <?php include plugin_dir_path( __FILE__ ) . 'synkli-leads-admin-navbar.php'; ?>
     </div>
     <div class="synkli-body">
-        <h3><?php echo __('Please enter the follwoing details to setup the connection:', 'synkli-leads'); ?></h3>
+        <h3><?php echo esc_html( __( 'Please enter the following details to setup the connection:', 'synkli-leads' ) ); ?></h3>
         <form method="post" action="options.php" class="synkli-form">
             <?php settings_fields( 'synkli_leads_api_settings' ); ?>
             <div class="form-group">
-                <label><?php echo __('Synkli API Key', 'synkli-leads'); ?></label>
+                <label><?php echo esc_html__( 'Synkli API Key', 'synkli-leads' ); ?></label>
                 <input type="text" name="synkli_api_key" value="<?php echo esc_attr( get_option( 'synkli_api_key' ) ); ?>" />
             </div>
             <div class="form-group">

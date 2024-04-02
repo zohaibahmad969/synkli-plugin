@@ -19,18 +19,18 @@
         <h2 class="synkli-header--title">Content</h2>
     </div>
     <div class="synkli-navbar--wrap">
-        <?php include(dirname (__FILE__) . '/synkli-leads-admin-navbar.php'); ?>
+        <?php include plugin_dir_path( __FILE__ ) . 'synkli-leads-admin-navbar.php'; ?>
     </div>
     <div class="synkli-body">
-        <h3><?php echo __('You can change form title and short description here:', 'synkli-leads'); ?></h3>
+        <h3><?php echo esc_html__( 'You can change form title and short description here:', 'synkli-leads' ); ?></h3>
         <form method="post" action="options.php" class="synkli-form synkli-form-emails">
             <?php settings_fields('synkli_leads_content_settings'); ?>
             <div class="form-group">
-                <label><?php echo __('Form Title', 'synkli-leads'); ?></label>
+                <label><?php echo esc_html__( 'Form Title', 'synkli-leads' ); ?></label>
                 <td><input type="text" name="synkli_form_title" value="<?php echo esc_attr(get_option('synkli_form_title')); ?>" /></td>
             </div>
             <div class="form-group">
-                <label><?php echo __('Form Description', 'synkli-leads'); ?></label>
+                <label><?php echo esc_html__( 'Form Description', 'synkli-leads' ); ?></label>
                 <textarea name="synkli_form_description" rows="5"><?php echo esc_textarea(get_option('synkli_form_description')); ?></textarea>
             </div>
             <div class="form-group">

@@ -1,5 +1,7 @@
 <?php
 
+	wp_nonce_field( 'synkli_send_email', 'synkli_email_nonce' );
+
 	// Generate the HTML for the form
     $output = '<div class="' . (get_option("synkli_form_style_type") !== 'synkli-style-custom' ? 'synkli-form-container' : '') . ' '.get_option("synkli_form_style_type").' ">';
 
