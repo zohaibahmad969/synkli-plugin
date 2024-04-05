@@ -136,7 +136,7 @@ jQuery(document).ready(function($) {
 		// AJAX request
 		$.ajax({
 			type: 'POST',
-			url: 'https://stg-api.synkli.dev/api/third-party/lead/create',
+			url: 'https://api.synkli.com.au/api/third-party/lead/create',
 			data: {
 				"first_name": $("#leadFirstName").val(),
 				"last_name": $("#leadLastName").val(),
