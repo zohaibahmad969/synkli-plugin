@@ -1,6 +1,5 @@
 jQuery(document).ready(function($) {
 
-
 	// Validations
 	$("textarea.maxlength-textarea").on("input", function() {
 		var maxLength = parseInt($(this).attr('maxlength'));
