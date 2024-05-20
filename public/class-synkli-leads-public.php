@@ -69,8 +69,7 @@ class Synkli_Leads_Public {
 
 		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/synkli-leads-public.css', array(), $this->version, 'all' );
 
-		wp_enqueue_style( $this->plugin_name . '-intlTelInput', 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.0/css/intlTelInput.css', array(), $this->version, 'all' );
-		wp_enqueue_style( $this->plugin_name . 'form', plugin_dir_url( __FILE__ ) . 'css/synkli-leads-form-style.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->plugin_name . '-intlTelInput', plugin_dir_url( __FILE__ ) . 'css/intlTelInput.css', array(), $this->version, 'all' );
 
 	}
 
@@ -81,12 +80,12 @@ class Synkli_Leads_Public {
 	 */
 	public function enqueue_scripts() {
 
-		wp_enqueue_script( $this->plugin_name . '-intlTelInput', 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.0/js/intlTelInput.min.js', array( 'jquery' ), $this->version, false );
-		wp_enqueue_script( $this->plugin_name . '-inputmask', 'https://cdnjs.cloudflare.com/ajax/libs/inputmask/4.0.8/jquery.inputmask.bundle.min.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name . '-intlTelInput', plugin_dir_url( __FILE__ ) . 'js/intlTelInput.min.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name . '-inputmask', plugin_dir_url( __FILE__ ) . 'js/jquery.inputmask.bundle.min.js', array( 'jquery' ), $this->version, false );
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/synkli-leads-public.js', array( 'jquery' ), $this->version, false );
 
 		// Localize the script with the ajaxurl
-        wp_localize_script($this->plugin_name, 'synkli_ajax', array('ajaxurl' => admin_url('admin-ajax.php')));
+        wp_localize_script($this->plugin_name, 'synkli_plugin_data', array('ajaxurl' => admin_url('admin-ajax.php') , 'synkliPluginUrl' => plugin_dir_url( __FILE__ ) ));
 
 	}
 	

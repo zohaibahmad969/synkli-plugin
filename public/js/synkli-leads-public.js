@@ -67,7 +67,7 @@ jQuery(document).ready(function($) {
 	                callback(countryCode);
 	            });
 	          },
-	          utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.0/js/utils.js" // just for 
+	          utilsScript: synkli_plugin_data.synkliPluginUrl + "js/utils.js" // just for 
 	      });
 	    
 	      $('.phone-field-only').on("focus click countrychange", function(e, countryData) {
@@ -163,7 +163,7 @@ jQuery(document).ready(function($) {
 
 				$.ajax({
 					type: 'POST',
-					url: synkli_ajax.ajaxurl, // Use WordPress AJAX URL
+					url: synkli_plugin_data.ajaxurl, // Use WordPress AJAX URL
 					data: formData,
 					dataType: 'json',
 					success: function(response) {
