@@ -9,11 +9,12 @@ License:           GPLv2 or later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 Tags:              Synkli CRM, Synkli Capture, Synkli
 
+
 Introducing SYNKLI Capture: Effortless Lead Generation and Management
 
 == Description ==
 
-Unlock the power of seamless lead generation and management with SYNKLI Capture, the ultimate plugin designed to elevate your WordPress website's capabilities. SYNKLI Capture integrates seamlessly with SYNKLI CRM, ensuring that every lead captured through your website is effortlessly synced with your CRM system, empowering you to nurture and convert leads with ease.
+Unlock the power of seamless lead generation and management with SYNKLI Capture, the ultimate plugin designed to elevate your WordPress website's capabilities. SYNKLI CAPTURE integrates seamlessly with SYNKLI CRM, ensuring that every lead captured through your website is effortlessly synced with your CRM system, empowering you to nurture and convert leads with ease.
 
 == Features ==
 
@@ -52,7 +53,7 @@ Unlock the power of seamless lead generation and management with SYNKLI Capture,
 
 == Third-Party Services ==
 
-This plugin relies on a third-party service to perform certain functions. Specifically, it interacts with the Synkli API to create leads. When a user submits the synkli Capture form, data is sent to the Synkli CRM API.
+This plugin relies on a third-party service to perform certain functions. Specifically, it interacts with the Synkli API to create leads. When a user submits the synkli capture form, data is sent to the Synkli CRM API.
 
 ==  Service Details ==
 
@@ -64,7 +65,6 @@ This plugin relies on a third-party service to perform certain functions. Specif
 == Data Transmission ==
 
 Data sent to the Synkli API includes user information necessary for lead creation. This may include personal data such as names, email addresses, phone, message, and other contact details. Users should ensure that their use of this plugin complies with relevant data protection laws.
-
 By using this plugin, you agree to the terms and conditions set forth by Synkli and acknowledge that data will be transmitted to and processed by Synkli as described in their [privacy policy](https://synkli.com.au/privacy-policy/) and [terms of use](https://synkli.com.au/terms-and-conditions/).
 
 == Support ==
@@ -117,11 +117,9 @@ This plugin is distributed in the hope that it will be useful, but WITHOUT ANY W
 
 You should have received a copy of the GNU General Public License along with this plugin; if not, see [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html).
 
-
 == Included CDN for country flag images ==
 
 The synkli Capture plugin uses country flag images from the cdn https://flagcdn.com
-
 
 == Disclaimer ==
 The SYNKLI Capture plugin is provided as-is, without any warranty or guarantee. We shall not be liable for any damages or losses arising from the use or misuse of this plugin.

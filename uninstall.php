@@ -19,13 +19,16 @@
  * For more information, see the following discussion:
  * https://github.com/tommcfarlin/WordPress-Plugin-Boilerplate/pull/123#issuecomment-28541913
  *
- * @link       https://https://www.synkli.com
+ * @link       https://www.synkli.com.au
  * @since      1.0.0
  *
- * @package    Synkli_Leads
+ * @package    Synkli_Capture
  */
 
 // If uninstall not called from WordPress, then exit.
 if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 	exit;
 }
+
+
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
